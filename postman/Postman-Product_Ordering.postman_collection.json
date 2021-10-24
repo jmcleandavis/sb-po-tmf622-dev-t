@@ -1,0 +1,635 @@
+{
+    "id": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+    "name": "PM-Product_Orderingv4.0.0",
+    "description": "**TMF API Reference : TMF 622 - Product Ordering Management**\n\n**Release : 19.0 - June 2019**\n\nThe Product Ordering API provides a standardized mechanism for placing a product order with all of the necessary order parameters. The API consists of a simple set of operations that interact with CRM/Order Negotiation systems in a consistent manner. A product order is created based on a product offer that is defined in a catalog. The product offer identifies the product or set of products that are available to a customer, and includes characteristics such as pricing, product options and market. This API provide a task based resource to request order cancellation.\n\nThe product order references the product offer and identifies any specific requests made by the customer.\n\n**Product Order resource**\nA Product Order is a type of order which can be used to place an order between a customer and a service provider or between a service provider and a partner and vice versa. Main Product Order attributes are its identifier, state, priority category (mass market, Enterprise, etc.) related dates (start, completion, etc.), related billing account, related parties and order items. Main Order Items (aka order lines) attributes are the ordered offering and product characteristics with the related action to be performed (e.g. add or delete the products), state, location information for delivery, order item price and price alteration.\n\nProduct Order API performs the following operations on product order :\n\n   -Retrieval of a product order or a collection of product orders depending on filter criteria\n    -Partial update of a product order (including updating rules)\n   -Creation of a product order (including default values and creation rules)\n   -Deletion of product order (for administration purposes)\n    -Notification of events on product order.\n\n**cancelProductOrder resource**\nThis resource is used to request a product order cancellation.\nProduct Order API performs the following operations on product order :\n\n   -Retrieval of a cancel product order or a collection of cancel product orders \n   -Creation of a cancel product order \n   -Notification of events on cancel product order.\n\n\nCopyright \u00a9 TM Forum 2019. All Rights Reserved\n\n\n",
+    "order": [],
+    "folders": [
+        {
+            "id": "d3d9904c-5529-4731-8749-5141ac97b45f",
+            "name": "productOrder",
+            "description": "Folder for productOrder",
+            "order": [
+                "d928abb8-5a42-4c7e-bac6-67dbae758a6f",
+                "67af59ae-b7fe-4372-9cee-ee4bb47fdf33",
+                "f4d58c56-f866-43aa-8755-4b3310b44b1c",
+                "ba32052f-0855-4877-aa92-4a2da1680d0e",
+                "f9907c3f-76bd-42ab-b254-9b81b595e526"
+            ],
+            "collection_name": "Product Ordering",
+            "collection_id": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "collection": "1764dcdc-70ee-445a-a3db-4c0e2642c338"
+        },
+        {
+            "id": "6ba4ae8c-67c5-444b-990b-8b12c208a326",
+            "name": "cancelProductOrder",
+            "description": "Folder for cancelProductOrder",
+            "order": [
+                "2d062efa-3cb6-4d71-9baa-f9aed8e47fb3",
+                "b4a9a9e5-1bac-4a6d-878c-808e072b3b80",
+                "e1b21d30-d01e-480d-a23c-ae512443fc56"
+            ],
+            "collection_name": "Product Ordering",
+            "collection_id": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "collection": "1764dcdc-70ee-445a-a3db-4c0e2642c338"
+        },
+        {
+            "id": "6f62ca41-d9aa-4846-a1d1-d9982bc5d805",
+            "name": "hub",
+            "description": "Folder for hub",
+            "order": [
+                "27e48d55-a523-4123-8e21-ce18d09e9784",
+                "21521310-70e0-4788-8210-a419c066374e"
+            ],
+            "collection_name": "Product Ordering",
+            "collection_id": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "collection": "1764dcdc-70ee-445a-a3db-4c0e2642c338"
+        },
+        {
+            "id": "518b3f43-d11a-4af4-a4a7-3004b5645d73",
+            "name": "listener",
+            "description": "Folder for listener",
+            "order": [
+                "dce1cd33-ae42-4f36-8a7e-10f02b3ba90a",
+                "a241b62d-6a47-4bab-ab24-8b08d0a27a3b",
+                "61fc7f18-15b9-4bb0-aa52-ddb5044770c1",
+                "d43b451d-a304-4221-a477-040712ecce54",
+                "a8e6c9cf-afab-4ead-afca-d4a6030fa8a8",
+                "eb552efb-3fff-40d3-b077-a49bb8f71a19",
+                "f4db73d8-5e6d-46c3-9a33-7cd9a514b8cd",
+                "c0bf8084-6cf5-4996-9ca5-0e89f72c312f"
+            ],
+            "collection_name": "Product Ordering",
+            "collection_id": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "collection": "1764dcdc-70ee-445a-a3db-4c0e2642c338"
+        }
+    ],
+    "timestamp": 1413302258635,
+    "synced": false,
+    "requests": [
+        {
+            "id": "d928abb8-5a42-4c7e-bac6-67dbae758a6f",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/productOrder?fields={{fields}}&offset={{offset}}&limit={{limit}}",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "GET",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "This operation list or find ProductOrder entities",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "List or find ProductOrder objects",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "67af59ae-b7fe-4372-9cee-ee4bb47fdf33",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/productOrder",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "{\n  \"category\": \"B2C product order\",\n  \"description\": \"Product Order illustration sample\",\n  \"externalId\": \"PO-456\",\n  \"priority\": \"1\",\n  \"requestedCompletionDate\": \"2019-05-02T08:13:59.506Z\",\n  \"requestedStartDate\": \"2019-05-03T08:13:59.506Z\",\n  \"channel\": [\n    {\n      \"id\": \"1\",\n      \"role\": \"Used channel for order capture\",\n      \"name\": \"Online chanel\"\n    }\n  ],\n  \"note\": [\n    {\n      \"id\": \"1\",\n      \"author\": \"Jean Pontus\",\n      \"date\": \"2019-04-30T08:13:59.509Z\",\n      \"text\": \"This is a TMF product order illustration\"\n    }\n  ],\n  \"productOrderItem\": [\n    {\n      \"id\": \"100\",\n      \"quantity\": 1,\n      \"action\": \"add\",\n      \"productOffering\": {\n        \"id\": \"14277\",\n        \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14277\",\n        \"name\": \"TMF25\"\n      },\n      \"productOrderItemRelationship\": [\n        {\n          \"id\": \"110\",\n          \"relationshipType\": \"bundles\"\n        },\n        {\n            \"id\": \"120\",\n            \"relationshipType\": \"bundles\"\n        },\n        {\n            \"id\": \"130\",\n            \"relationshipType\": \"bundles\"\n        }\n      ],\n      \"@type\": \"ProductOrderItem\"\n    },\n    {\n        \"id\": \"110\",\n        \"quantity\": 1,\n        \"action\": \"add\",\n        \"itemPrice\": [\n          {\n            \"description\": \"Access Fee\",\n            \"name\": \"Access Fee\",\n            \"priceType\": \"nonRecurring\",\n            \"price\": {\n              \"taxRate\": 0,\n              \"dutyFreeAmount\": {\n                \"unit\": \"EUR\",\n                \"value\": 0.99\n              },\n              \"taxIncludedAmount\": {\n                \"unit\": \"EUT\",\n                \"value\": 0.99\n              }\n            }\n          }\n        ],\n        \"payment\": [\n          {\n            \"id\": \"2365\",\n            \"href\": \"https://host:port/paymentManagement/v4/cashPayment/2365\",\n            \"name\": \"Cash payment for access fee\",\n            \"@type\": \"CashPayment\",\n            \"@referredType\": \"Payment\"\n          }\n        ],\n        \"product\": {\n          \"isBundle\": false,\n          \"@type\": \"Product\",\n          \"productCharacteristic\": [\n                {\n                \"name\": \"TEL_MSISDN\",\n                \"valueType\": \"string\",\n                \"value\": \"415 279 7439\"\n                }\n            ],\n          \"productSpecification\": {\n            \"id\": \"14307\",\n            \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14307\",\n            \"name\": \"Mobile Telephony\",\n            \"version\": \"1\",\n            \"@type\": \"ProductSpecificationRef\"\n          }\n        },\n        \"productOffering\": {\n          \"id\": \"14305\",\n          \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14305\",\n          \"name\": \"TMF Mobile Telephony\"\n        },\n        \"@type\": \"ProductOrderItem\"\n      },\n      {\n        \"id\": \"120\",\n        \"quantity\": 1,\n        \"action\": \"add\", \n        \"billingAccount\": {\n            \"id\": \"1513\",\n            \"href\": \"https://host:port/billingAccountManagement/v4/billingAccount/1513\",\n            \"@type\": \"BillingAccount\"\n          },\n        \"itemPrice\": [\n          {\n            \"description\": \"Tariff plan monthly fee\",\n            \"name\": \"MonthlyFee\",\n            \"priceType\": \"recurring\",\n            \"recurringChargePeriod\": \"month\",\n            \"price\": {\n              \"taxRate\": 0,\n              \"dutyFreeAmount\": {\n                \"unit\": \"EUR\",\n                \"value\": 20\n              },\n              \"taxIncludedAmount\": {\n                \"unit\": \"EUR\",\n                \"value\": 20\n              }\n            },\n            \"priceAlteration\": [\n              {\n                \"applicationDuration\": 3,\n                \"description\": \"20% for first 3 months\",\n                \"name\": \"WelcomeDiscount\",\n                \"priceType\": \"recurring\",\n                \"priority\": 1,\n                \"recurringChargePeriod\": \"month\",\n                \"price\": {\n                  \"percentage\": 20,\n                  \"taxRate\": 0,\n                  \"@type\": \"price\"\n                }\n              }\n            ]\n          }\n        ],\n        \"itemTerm\": [\n          {\n            \"description\": \"Tariff plan 12 Months commitment\",\n            \"name\": \"12Months\",\n            \"duration\": {\n              \"amount\": 12,\n              \"units\": \"month\"\n            }\n          }\n        ],\n        \"product\": {\n          \"isBundle\": false,\n          \"@type\": \"Product\",\n          \"productSpecification\": {\n            \"id\": \"14395\",\n            \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14395\",\n            \"name\": \"TMF Tariff plan\",\n            \"version\": \"1\",\n            \"@type\": \"ProductSpecificationRef\"\n          }\n        },\n        \"productOffering\": {\n          \"id\": \"14344\",\n          \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14344\",\n          \"name\": \"TMF Tariff Plan\"\n        },\n        \"productOrderItemRelationship\": [\n          {\n            \"id\": \"110\",\n            \"relationshipType\": \"reliesOn\"\n          }\n        ],\n        \"@type\": \"ProductOrderItem\"\n      },      \n      {\n        \"id\": \"130\",\n        \"quantity\": 1,\n        \"action\": \"add\",\n        \"product\": {\n          \"isBundle\": false,\n          \"@type\": \"Product\",\n          \"productCharacteristic\": [\n            {\n              \"name\": \"CoverageOptions\",\n              \"valueType\": \"string\",\n              \"value\": \"National\"\n            }\n          ],\n          \"productSpecification\": {\n            \"id\": \"14353\",\n            \"href\": \"https://host:port/productCatalogManagement/v4/productSpecification/14353\",\n            \"name\": \"Coverage\",\n            \"version\": \"1\",\n            \"@type\": \"ProductSpecificationRef\"\n          }\n        },\n        \"productOffering\": {\n          \"id\": \"14354\",\n          \"href\": \"https://host:port/productCatalogManagement/v4/productOffering/14354\",\n          \"name\": \"Coverage Options\"\n        },\n        \"productOrderItemRelationship\": [\n          {\n            \"id\": \"110\",\n            \"relationshipType\": \"reliesOn\"\n          }\n        ],\n        \"@type\": \"ProductOrderItem\"\n      }\n  ],\n  \"relatedParty\": [\n    {\n      \"id\": \"456-dd-df45\",\n      \"href\": \"https://host:port/partyManagement/v4/individual/456-dd-df45\",\n      \"name\": \"Joe Doe\",\n      \"role\": \"Seller\",\n      \"@type\": \"RelatedParty\",\n      \"@referredType\": \"Individual\"\n    },\n    {\n      \"id\": \"ff55-hjy4\",\n      \"href\": \"https://host:port/partyRoleManagement/v4/customer/ff55-hjy4\",\n      \"name\": \"Jean Pontus\",\n      \"@type\": \"RelatedParty\",\n      \"@referredType\": \"Customer\"\n    }    \n  ],\n  \"@type\": \"ProductOrder\"\n}",
+            "dataMode": "raw",
+            "description": "This operation creates a ProductOrder entity.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Creates a ProductOrder",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f4d58c56-f866-43aa-8755-4b3310b44b1c",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/productOrder/:id?fields={{fields}}",
+            "pathVariables": {
+                "id": "{{id}}"
+            },
+            "preRequestScript": "",
+            "method": "GET",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "This operation retrieves a ProductOrder entity. Attribute selection is enabled for all first level attributes.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Retrieves a ProductOrder by ID",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "ba32052f-0855-4877-aa92-4a2da1680d0e",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/productOrder/:id",
+            "pathVariables": {
+                "id": "{{id}}"
+            },
+            "preRequestScript": "",
+            "method": "PATCH",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "This operation updates partially a ProductOrder entity.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Updates partially a ProductOrder"
+        },
+        {
+            "id": "f9907c3f-76bd-42ab-b254-9b81b595e526",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/productOrder/:id",
+            "pathVariables": {
+                "id": "{{id}}"
+            },
+            "preRequestScript": "",
+            "method": "DELETE",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "This operation deletes a ProductOrder entity.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Deletes a ProductOrder"
+        },
+        {
+            "id": "2d062efa-3cb6-4d71-9baa-f9aed8e47fb3",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/cancelProductOrder?fields={{fields}}&offset={{offset}}&limit={{limit}}",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "GET",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "This operation list or find CancelProductOrder entities",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "List or find CancelProductOrder objects",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "b4a9a9e5-1bac-4a6d-878c-808e072b3b80",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/cancelProductOrder",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "{\n  \"cancellationReason\": \"Duplicate order\",\n  \"requestedCancellationDate\": \"2019-04-30T12:56:21.931Z\",\n  \"productOrder\": {\n    \"id\": \"45f-98f-ss45\",\n    \"href\": \"https://host:port/productOrderingManagement/v4/productOrder/45f-98f-ss45\",\n    \"@referredType\": \"ProductOrder\"\n  },\n  \"@type\": \"CancelProductorder\"\n}",
+            "dataMode": "raw",
+            "description": "This operation creates a CancelProductOrder entity.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Creates a CancelProductOrder",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "e1b21d30-d01e-480d-a23c-ae512443fc56",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/cancelProductOrder/:id?fields={{fields}}",
+            "pathVariables": {
+                "id": "{{id}}"
+            },
+            "preRequestScript": "",
+            "method": "GET",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "This operation retrieves a CancelProductOrder entity. Attribute selection is enabled for all first level attributes.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Retrieves a CancelProductOrder by ID",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "27e48d55-a523-4123-8e21-ce18d09e9784",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/hub",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Sets the communication endpoint address the service instance must use to deliver information about its health state, execution state, failures and metrics.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Register a listener",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "21521310-70e0-4788-8210-a419c066374e",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/hub/:id",
+            "pathVariables": {
+                "id": "{{id}}"
+            },
+            "preRequestScript": "",
+            "method": "DELETE",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "params",
+            "description": "Resets the communication endpoint address the service instance must use to deliver information about its health state, execution state, failures and metrics.",
+            "descriptionFormat": "html",
+            "time": 1564573989915,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Unregister a listener"
+        },
+        {
+            "id": "dce1cd33-ae42-4f36-8a7e-10f02b3ba90a",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/productOrderCreateEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification ProductOrderCreateEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity ProductOrderCreateEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "a241b62d-6a47-4bab-ab24-8b08d0a27a3b",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/productOrderAttributeValueChangeEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification ProductOrderAttributeValueChangeEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity ProductOrderAttributeValueChangeEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "61fc7f18-15b9-4bb0-aa52-ddb5044770c1",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/productOrderDeleteEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification ProductOrderDeleteEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity ProductOrderDeleteEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "d43b451d-a304-4221-a477-040712ecce54",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/productOrderStateChangeEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification ProductOrderStateChangeEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity ProductOrderStateChangeEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "a8e6c9cf-afab-4ead-afca-d4a6030fa8a8",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/productOrderInformationRequiredEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification ProductOrderInformationRequiredEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity ProductOrderInformationRequiredEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "eb552efb-3fff-40d3-b077-a49bb8f71a19",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/cancelProductOrderCreateEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification CancelProductOrderCreateEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity CancelProductOrderCreateEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f4db73d8-5e6d-46c3-9a33-7cd9a514b8cd",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/cancelProductOrderStateChangeEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification CancelProductOrderStateChangeEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity CancelProductOrderStateChangeEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "c0bf8084-6cf5-4996-9ca5-0e89f72c312f",
+            "headers": "Accept: application/json;charset=utf-8\nContent-Type: application/json;charset=utf-8\n",
+            "url": "{{Product_Ordering_API}}/tmf-api/productOrderingManagement/v4/listener/cancelProductOrderInformationRequiredEvent",
+            "pathVariables": {},
+            "preRequestScript": "",
+            "method": "POST",
+            "data": [],
+            "rawModeData": "",
+            "dataMode": "raw",
+            "description": "Example of a client listener for receiving the notification CancelProductOrderInformationRequiredEvent",
+            "descriptionFormat": "html",
+            "time": 1564573989916,
+            "version": 2,
+            "responses": [],
+            "tests": "",
+            "collectionId": "1764dcdc-70ee-445a-a3db-4c0e2642c338",
+            "synced": false,
+            "name": "Client listener for entity CancelProductOrderInformationRequiredEvent",
+            "events": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"Status code is 201\", function () {",
+                            "    pm.response.to.have.status(201);",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        }
+    ]
+}
