@@ -199,7 +199,7 @@ function processCommonAttributes(req, type, obj) {
       // obj.id = uuid.v4();
       //[JMD] added to override the SC ID
       const uid = new ShortUniqueId({ length: 8, dictionary: "number" });// Init SUID
-      payload.id = 'PO-' + uid(); //Generate Eternal Order ID
+      obj.id = 'PO-' + uid(); //Generate Eternal Order ID
     };
 
     if(typeprops.href!==undefined && obj.href==undefined) {
