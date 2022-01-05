@@ -1,6 +1,7 @@
 'use strict';
 
 const uuid = require('uuid');
+const ShortUniqueId = require('short-unique-id');
 
 const swaggerUtils = require('../utils/swaggerUtils');
 const mongoUtils = require('../utils/mongoUtils');
@@ -195,7 +196,10 @@ function processCommonAttributes(req, type, obj) {
     const typeprops=typedef.properties;
 
     if(typeprops.id!==undefined && obj.id==undefined) {
-      obj.id = uuid.v4();
+      // obj.id = uuid.v4();
+      //[JMD] added to override the SC ID
+      const uid = new ShortUniqueId({ length: 8, dictionary: "number" });// Init SUID
+      payload.id = 'PO-' + uid(); //Generate Eternal Order ID
     };
 
     if(typeprops.href!==undefined && obj.href==undefined) {
